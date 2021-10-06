@@ -1,0 +1,143 @@
+<div class="container backcolor">
+    <form name="form" #frm="ngForm" (ngSubmit)="frm.form.valid&&onSubmit(frm)" ngNativeValidate>
+        <div class="form-group row">
+            <br>
+        </div>
+        <div class="row">
+            <label for="FirstName" class="col-sm-2 col-form-label">FirstName</label>
+            <div class="col-sm-4">
+                <input type="text" name="FirstName" [(ngModel)]=userobj.FirstName ngModel #FirstName="ngModel"
+                    required />
+            </div>
+            <label for="LastName" class="col-sm-2 col-form-label">LastName</label>
+            <div class="col-lg-4">
+                <input type="text" name="LastName" [(ngModel)]=userobj.LastName ngModel #LastName="ngModel" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="StreetAddress" class="col-sm-2 col-form-label">Billing Address</label>
+            <div class="col">
+                <input type="text" name="StreetAddress" [(ngModel)]=userobj.StreetAddress ngModel
+                    #StreetAddress="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="City" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-4">
+                <input type="text" name="City" [(ngModel)]=userobj.City ngModel #City="ngModel" />
+            </div>
+
+            <label for="State" class="col-sm-2 col-form-label">State</label>
+            <div class="col-sm-4">
+                <select name="State" [(ngModel)]=userobj.State ngModel #State="ngModel">
+                     <option *ngFor="let state of States">{{state}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Zip" class="col-sm-2 col-form-label">Zip</label>
+            <div class="col-sm-4">
+                <input type="text" name="Zip" [(ngModel)]=userobj.Zip ngModel #Zip="ngModel" />
+            </div>
+
+            <label for="Email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-4">
+                <input type="text" class="" name="Email" [(ngModel)]=userobj.Email ngModel #Email="ngModel" required
+                    [ngClass]="{'is-invalid': frm.submitted && Email.invalid}"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="PhoneNumber" class="col-sm-2 col-form-label">PhoneNumber</label>
+            <div class="col-sm-4">
+                <input type="text" name="PhoneNumber" [(ngModel)]=userobj.PhoneNumber ngModel #PhoneNumber="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <h6>Credit Card Information</h6>
+
+        </div>
+
+
+
+        <div class="col_data">
+            <div class="row">
+                <div class="container-fluid d-flex">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+
+                            </div>
+                            <div class="card-body" style="height: 350px">
+                                <div class="row">
+                                    <div class="col-md-4 text-right"> <span>Card Type</span> </div>
+                                    <div class="col-md-5">
+                                        <select name="CardType" [(ngModel)]=userobj.CardType ngModel required>
+                                            <option *ngFor="let CardType of CardTypes">{{CardType}}</option>
+                                        </select>&nbsp;
+                                        <img src="../../../assets/payment/American_Express_1.jpg"> &nbsp; <img
+                                            src="../../../assets/payment/MasterCard_1.jpg">&nbsp; <img
+                                            src="../../../assets/payment/Visa_1.jpg">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Expiry Date
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select name="ExpiryMonth" [(ngModel)]=userobj.ExpiryMonth ngModel required>
+                                            <option *ngFor="let ExpiryMonth of ExpiryMonths">{{ExpiryMonth}}</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Expiry Year
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select name="ExpiryYear" [(ngModel)]=userobj.ExpiryYear ngModel required>
+                                            <option *ngFor="let ExpiryYear of ExpiryYears">{{ExpiryYear}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4 text-right"> <span>New Card</span> </div>
+                                <div class="col-md-8">
+                                    <input type="text" name="Card1"  [(ngModel)]=userobj.Card1 class="textboxwidth" ngModel #Card1="ngModel" required />
+                                    <input type="text" name="Card2" [(ngModel)]=userobj.Card2 class="textboxwidth" ngModel #Card2="ngModel" required />
+                                    <input type="text" name="Card3" [(ngModel)]=userobj.Card3 class="textboxwidth" ngModel #Card3="ngModel" required />
+                                    <input type="text" name="Card4" [(ngModel)]=userobj.Card4 class="textboxwidth" ngModel #Card4="ngModel" required />
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 text-right"> </div>
+                                <div class="col-md-8 txt" >
+                                    Please enter the 3 or 4 digit code that appears on the front or back of your credit
+                                    card
+                                    
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="Cardcvc" [(ngModel)]=userobj.Cardcvc class="textboxwidth1" ngModel #Cardcvc="ngModel" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container btn">
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary" button
+                                        type="submit">Continue</button>&nbsp;
+                                    <input class="btn btn-secondary" type="reset" value="Reset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</form>
+</div>

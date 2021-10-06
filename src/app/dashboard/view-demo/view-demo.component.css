@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body, html {
+    font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.banner {
+    background-image: url('../../../assets/viewdemo//banner.png');
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+}
+
+.head {
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
+    font-family: "Calibri", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.sub-title {
+    color: #fff;
+    font-weight: 100;
+    font-size: 36px;
+    font-family: "Calibri", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.title1 {
+    color: #d80627;
+    font-weight: 100;
+    font-size: 26px;
+    font-family: "Calibri", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.btn-more {
+    color: #fff;
+    background-color: #bc0012;
+    border-color: rgba(245, 245, 245, 0.49);
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+.top {
+    height: 40px;
+    background: #64647e;
+    color: #fff;
+}
+
+.container {
+    width: 900px;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+ul, li {
+    padding: 7px 25px;
+}
+
+.footer {
+    background-color: #5a5d7e;
+    color: #fff;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.well1 {
+    background: #fff;
+}
+
+/* .modal-bg {
+    background-image: url('../../../assets/viewdemo/banner1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.editor {
+    width: 100%;
+}
+
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .divcls {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.3em;
+        color: #3c3c3c;
+    }
+
+    ul, li, .my-nav > li > a {
+        padding: 2px 5px;
+        margin: 0;
+        padding: 2px 5px !important;
+        margin: 0;
+        float: left !important;
+       
+    }
+
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        background: transparent;
+    }
+.navbar {
+    background: #eee;
+    margin-bottom: 0;
+}
+
+.banner-landing {
+    background-image: url('../../../assets/viewdemo/slidelaw1.jpg');
+    height: 350px;
+    background-repeat: repeat;
+    background-size: cover;
+   
+}
+
+.banner-landing, h2 {
+    color: rgb(247, 247, 247);
+    font-family: serif;
+    font-size: 40px !important;
+    padding: 55px 0;
+    font-weight: bold !important;
+}
+
+h4, .head-text {
+    color: rgba(85, 92, 169, 0.94);
+}
+
+hr {
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+.field-validation-error, .field-validation-valid {
+    color: #ff1b39;
+    font-size: 12px;
+}
+
+.text-box {padding: 6px 10px;    border: 1px solid #c5c5c5;
+}

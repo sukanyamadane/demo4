@@ -1,0 +1,9 @@
+/* @media only screen and (max-width:600px)
+ { */
+.containerdata
+{
+    max-width: 898px;
+    width: 100%;
+    margin: 10px auto;
+}
+ /* } */

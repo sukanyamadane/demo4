@@ -1,0 +1,36 @@
+
+.footerdata
+{
+    bottom: 0;
+    /* position: fixed; */
+   
+    color: white;
+    text-align: center;
+}
+.rowcls
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.footer-copyright
+{
+    height: 22px;
+    background-color: rgb(159, 160, 178);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+.col123
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: rgb(101, 101, 127);
+
+}
+
+
+

@@ -1,0 +1,188 @@
+
+<div class="container col_data ">
+    <form name="form" #frm="ngForm" (ngSubmit)="frm.form.valid&&onSubmit(frm)" ngNativeValidate>
+
+        <div class="form-group row">
+            <label for="Email" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-6">
+                <input type="text" class="" name="Email" [(ngModel)]=userobj.Email ngModel #Email="ngModel" required
+                    [ngClass]="{'is-invalid': frm.submitted && Email.invalid}"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Email" class="col-sm-4 col-form-label">Password</label>
+            <div class="col-sm-6">
+                <input type="password" name="Password" [(ngModel)]=userobj.Password ngModel #Password="ngModel" required
+                    [ngClass]="{'is-invalid': frm.submitted && Password.invalid}" pattern=".{8,}">
+                <div *ngIf="frm.submitted && Password.invalid" class="invalid-feedback">
+                    <div *ngIf="Password.errors?.required">Password is required</div>
+                    <div *ngIf="Password.errors?.pattern">Please enter 8 or more character</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="CPassword" class="col-sm-4 col-form-label">Confirm Password</label>
+            <div class="col-sm-6">
+                <input type="password" name="CPassword" [(ngModel)]=userobj.CPassword ngModel #CPassword="ngModel" required
+                    [ngClass]="{'is-invalid': frm.submitted && CPassword.invalid}" pattern=".{8,}">
+                <div *ngIf="frm.submitted && CPassword.invalid" class="invalid-feedback">
+                    <div *ngIf="CPassword.errors?.required">Password is required</div>
+                    <div *ngIf="CPassword.errors?.pattern">Please enter 8 or more character</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="SecurityQuestion" class="col-sm-4 col-form-label">Security Question</label>
+            <div class="col-sm-6">
+                <select class="" name="SecurityQuestion" [(ngModel)]=userobj.SecurityQuestion ngModel>
+                    <option *ngFor="let question of SecurityQuestion">{{question}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="SecurityQuestAns" class="col-sm-4 col-form-label">Security Question Answer </label>
+            <div class="col-sm-6">
+                <input type="text" name="SecurityQuestAns" [(ngModel)]=userobj.SecurityQuestAns ngModel
+                    #SecurityQuestAns="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="IsNewAccount" class="col-sm-4 col-form-label">Create New Account</label>
+            <div class="col-sm-6">
+                <input type="radio" name="IsNewAccount" value="New" [(ngModel)]=userobj.IsNewAccount ngModel
+                    #IsNewAccount="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="IsNewAccount" class="col-sm-4 col-form-label">Add to Existing Account</label>
+            <div class="col-sm-6">
+                <input type="radio" name="IsNewAccount" value="Old" [(ngModel)]=userobj.IsNewAccount ngModel
+                    #IsNewAccount="ngModel" />
+            </div>
+        </div>
+
+
+
+        <div *ngIf="userobj.IsNewAccount=='New'">
+        <div class="form-group row">
+            <label for="ContactType" class="col-sm-4 col-form-label">Contact Type</label>
+            <div class="col-sm-6">
+                <select name="ContactType" [(ngModel)]=userobj.ContactType ngModel>
+                    <option *ngFor="let contact of ContactTypes">{{contact}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="BarNumber" class="col-sm-4 col-form-label">Bar Number</label>
+            <div class="col-sm-6">
+                <input type="text" name="BarNumber" [(ngModel)]=userobj.BarNumber ngModel #BarNumber="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="StateBar" class="col-sm-4 col-form-label">State Bar of Record</label>
+            <div class="col-sm-6">
+                <select name="StateBar" [(ngModel)]=userobj.StateBar ngModel>
+                    <option *ngFor="let stateb of StateBars">{{stateb}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="FirstName" class="col-sm-4 col-form-label">FirstName</label>
+            <div class="col-sm-6">
+                <input type="text" name="FirstName" [(ngModel)]=userobj.FirstName ngModel #FirstName="ngModel"
+                    required />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="MiddleName" class="col-sm-4 col-form-label">MiddleInitial</label>
+            <div class="col-sm-6">
+                <input type="text" name="MiddleName" [(ngModel)]=userobj.MiddleName ngModel #MiddleName="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="LastName" class="col-sm-4 col-form-label">LastName</label>
+            <div class="col-sm-6">
+                <input type="text" name="LastName" [(ngModel)]=userobj.LastName ngModel #LastName="ngModel" required />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="StreetAddress" class="col-sm-4 col-form-label">Street Address</label>
+            <div class="col-sm-6">
+                <input type="text" name="StreetAddress" [(ngModel)]=userobj.StreetAddress ngModel
+                    #StreetAddress="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="OtherAddress" class="col-sm-4 col-form-label">Other Address</label>
+            <div class="col-sm-6">
+                <input type="text" name="OtherAddress" [(ngModel)]=userobj.OtherAddress ngModel
+                    #OtherAddress="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="State" class="col-sm-4 col-form-label">State</label>
+            <div class="col-sm-6">
+                <select name="State" [(ngModel)]=userobj.State ngModel>
+                    <option *ngFor="let state of States">{{state}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="City" class="col-sm-4 col-form-label">City</label>
+            <div class="col-sm-6">
+                <input type="text" name="City" [(ngModel)]=userobj.City ngModel #City="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Zip" class="col-sm-4 col-form-label">Zip</label>
+            <div class="col-sm-6">
+                <input type="text" name="Zip" [(ngModel)]=userobj.Zip ngModel #Zip="ngModel" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="PhoneNumber" class="col-sm-4 col-form-label">PhoneNumber</label>
+            <div class="col-sm-6">
+                <input type="text" name="PhoneNumber" [(ngModel)]=userobj.PhoneNumber ngModel #PhoneNumber="ngModel" />
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-secondary" button type="submit">
+                Continue
+            </button>
+
+            <button class="btn btn-secondary" button type="clear">
+                Cancel
+            </button>
+
+        </div>
+    </div>
+
+
+
+        <div *ngIf="userobj.IsNewAccount=='Old'">
+            <div class="form-group row">
+                <label for="CustNumber" class="col-sm-4 col-form-label">Customer Number</label>
+                <div class="col-sm-6">
+                    <input type="text" name="CustNumber" [(ngModel)]=userobj.CustNumber ngModel #CustNumber="ngModel" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="BillingZipCode" class="col-sm-4 col-form-label">Billing Zip Code</label>
+                <div class="col-sm-6">
+                    <input type="text" name="BillingZipCode" [(ngModel)]=userobj.BillingZipCode ngModel #BillingZipCode="ngModel" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-secondary" button type="submit">
+                    Verify Account
+                </button>
+            </div>
+            <div style="margin-left: 605px;margin-top: -108px;width:200px;border:2px solid black;font-size: small;color:red"> 
+                Please contact your Office administrator to get User ID and Zip Code which 
+                is inside the confirmation mail that was sent when your Office administrator
+                 first registered.
+            </div>
+        </div>
+</form>
+</div>

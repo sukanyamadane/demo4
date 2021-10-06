@@ -1,0 +1,34 @@
+/* .horizontal_divider{
+    color: rgb(0, 0, 0);
+    border-top: 2px dotted black;
+    opacity: .4;
+   max-width: 900px;
+}
+.background{
+    background: #555;
+}
+
+.content {
+max-width: 900px;
+margin: auto;
+background: white;
+padding: 10px;
+background-color:rgb(238, 235, 235);
+} */
+
+.pdftop{
+    margin-left: 67%;
+    margin-top: -105%;
+}
+.bgcolorrow{
+    background-color: #E9E9EC;
+    margin-left: 0px;
+    margin-right: 0px;
+
+
+
+}
+.textjustify{
+    font-size: 12px;
+    text-align: justify;
+}

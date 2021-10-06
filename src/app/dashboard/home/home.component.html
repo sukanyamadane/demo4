@@ -1,0 +1,89 @@
+<div class="home">
+    <div>
+        <img src="../../../assets/Center_image_old (1).jpg" alt="">
+    </div>
+    <div class="blink">
+        <span class="span"> If you are already registered with e-filing.com web portal then use registered Email Id and
+            Password to login otherwise go to SignUp and register yourself.
+            If you have any issue, please feel free to call our support at 805-364-0033 ext 107.</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="../../../assets/Arrow_bullet_big.jpg" alt="">
+            </div>
+            <div class="col-11">
+                <h1 class="spandata">File your Court Document Online !</h1>
+            </div>
+        </div>
+        <div class="row homeicon">
+            <div class="col">
+                <a> <img src="../../../assets/Home_Page_Image.jpg" alt=""> </a>
+                E-Filing.com, headquartered in Santa Barbara, California began its operation in September of 1999.
+                E-Filing.com offers state-of-the art electronic filing process based on the patent no. 7,035,830 that
+                was granted to Image X in 2006. Filing cases electronically reduces the cost of filing, eliminating much
+                of the paper handling involved, and allows the courts to function more efficiently. In addition,
+                E-Filing.com's electronic filing process makes it possible for documents to be submitted to the courts
+            </div>
+
+
+            <div class="col">
+                <div class="container col_data">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-secondary" type="button" (click)="showLogin()">Login</button>
+                            <button class="btn btn-secondary" type="button" (click)="showSignup()">SignUp</button>
+                            <!-- Nav tabs -->
+                            <!-- <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul> -->
+
+                            <!-- Tab panes -->
+                            <!-- <div class="tab-content">
+    <div class="tab-pane container active" id="home">...</div>
+    <div class="tab-pane container fade" id="menu1">...</div>
+    <div class="tab-pane container fade" id="menu2">...</div>
+  </div> -->
+                        </div>
+                    </div>
+
+                    <div *ngIf="showSignUp">
+                        <app-sign-up>
+                        </app-sign-up>
+                    </div>
+
+
+                    <div *ngIf="!showSignUp">
+                        <app-sign-in></app-sign-in>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a><img src="../../../assets/Arrow_bullet_big.jpg"></a>
+                    <h1 class="icondata"> To use this site create a login ID and Password.</h1>
+
+                </div>
+                <div class="col">
+                    <h6 class="logdata">Use of this service is subject to
+                        <a class="btnlink" [routerLink]="">Subscription Agreement</a>
+                    </h6>
+                </div>
+            </div>
+            <ol class="list-group list-group-numbered">
+                <li>Click Sign Up</li>
+                <li>Complete The Form</li>
+                <li>Write Down Your Login Id and Password</li>
+
+            </ol>
+        </div>
+    </div>
